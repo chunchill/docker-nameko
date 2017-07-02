@@ -1,0 +1,9 @@
+version: '2'
+services:
+  echo:
+    build: ./echo
+    restart: always
+    depends_on:
+      - rabbitmq
+  rabbitmq:
+      image: "rabbitmq"
